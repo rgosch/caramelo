@@ -1,28 +1,49 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="@/assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <CarameloPage />
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import Header from '@/components/skeleton/Header.vue';
+import CarameloPage from '@/pages/CarameloPage.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    CarameloPage,
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import '@/assets/scss/colors.scss';
+  @import '@/assets/scss/constants.scss';
+  @import '@/assets/scss/input.scss';
+  @import '@/assets/scss/button.scss';
+  @import '@/assets/scss/wrapper.scss';
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+
+  body, html {
+    min-height: 100vh;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    font-weight: normal;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
 </style>
